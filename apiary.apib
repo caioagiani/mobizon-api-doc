@@ -84,7 +84,7 @@ Permite enviar uma única mensagem para um número de celular especificado, mais
             + Default: `json`
         + api (string, optional) - Versão da API.
             + Default: `v1`
-        + recipient (string, required) - Número de telefone do destinatário em formato internacional (sem incluir o caractere +), ex.: 5511963928063.
+        + recipient (string, required) - Número de telefone do destinatário em formato internacional (sem incluir o caractere +), ex.: 5511941439844.
         + text (string, required) - Texto da sua mensagem SMS no formato de string URL encoded: "Texto da mensagem aqui!".
         + from (string, optional) - Seu Sender ID (assinatura alfanumérica). Se nenhum for fornecido, seu Sender ID padrão será usado ou, se você não tiver nenhum, o Sender ID padrão do sistema.
 
@@ -94,7 +94,7 @@ Permite enviar uma única mensagem para um número de celular especificado, mais
             
     + Body 
 
-            recipient=5511999865802&text=Mobizon SMS API&from=&output=json&api=v1&apiKey=brXXXXXXXXXXXXXX
+            recipient=5511941439844&text=Mobizon SMS API&from=&output=json&api=v1&apiKey=brXXXXXXXXXXXXXX
 
 
 + Response 200 (application/json)
@@ -160,7 +160,7 @@ Lista todas as mensagens SMS enviadas, mais detalhes: [#List](https://mobizon.co
                     "status": "DELIVRD",
                     "uuid": "bb1a64f6-0017-1a8a-9fa7-xxxxxxxxxxx",
                     "from": "N-666666",
-                    "to": "5511999865802",
+                    "to": "5511941439844",
                     "groups": null,
                     "text": "Mobizon SMS API",
                     "startSendTs": "2021-09-04 13:31:12",
@@ -316,27 +316,27 @@ O método aceita uma string com um ID de mensagem e uma matriz de IDs de mensage
     
 ## ListSMS
 
-+ id (number, optional) - Message ID
-+ campaignId (number, optional) - Campaign ID
-+ campaignIds (array, optional) - Search by campaign IDs; the parameter should be passed as an array or a string of IDs, separated by commas, the maximum number of IDs equals to 10; when this limit is exceeded, the search will occur on the first 10 entries of the list (if this parameter is set, then a forced limitation on the creation date is not used and search runs on all campaigns ever created)
-+ from (string, optional) - Sender's signature
-+ to (string, optional) - Recipient number
-+ text (string, optional) - Message text
-+ status (number, optional) - Message status
-+ groups (string, optional) - Message recipient groups
++ id (number, optional) - ID da mensagem
++ campaignId (number, optional) - ID da campanha
++ campaignIds (array, optional) - Pesquisa por IDs de campanha; o parâmetro deve ser passado como uma matriz ou string de IDs, separados por vírgulas, o número máximo de IDs é igual a 10
++ from (string, optional) - Assinatura do remetente
++ to (string, optional) - Número do destinatário
++ text (string, optional) - Mensagem de texto
++ status (number, optional) - Status da mensagem
++ groups (string, optional) - Grupos de destinatários de mensagens
 + contentProviderId (string, optional) - SMS centre ID
     
 ## Pagination
 
-+ pageSize (number, optional) - Number of visible elements on the page
-+ currentPage (number, optional) - Current page
++ pageSize (number, optional) - Número de elementos visíveis na página
++ currentPage (number, optional) - Pagina atual
 
 ## Sort
-+ id (number, optional) - Message ID
-+ campaignId (number, optional) - Campaign ID
-+ from (number, optional) - Senders signature
-+ to (number, optional) - Recipient number
++ id (number, optional) - ID da mensagem
++ campaignId (number, optional) - ID da campanha
++ from (number, optional) - Assinatura do remetente
++ to (number, optional) - Número do destinatário
 + text (number, optional) - Message text
-+ status (number, optional) - Message status
-+ groups (number, optional) - Message recipient groups
++ status (number, optional) - Mensagem de texto
++ groups (number, optional) - Grupos de destinatários de mensagens
 + contentProviderId (number, optional) - SMS centre ID
